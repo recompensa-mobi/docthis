@@ -1,7 +1,7 @@
 # DocThis!
 
-DocThis! is a very small mountable engine we use in our rails applications to
-render any markdown files stored in a documentation folder inside the
+**DocThis!** is a very small mountable engine we use in our rails applications
+to render any markdown files stored in a documentation folder inside the
 application. The markdown files are parsed and rendered in a wiki-style format,
 which allows us to access and navigate the documentation easily.
 
@@ -23,10 +23,10 @@ through files in the documentation folder is not a great way to read.
 Navegability and readability are not great, and there is no way other that
 cloning the repo to access the documentation.
 
-DocThis! exposes the documentation folder in the repository as a mountable
-rails engine. No more navigating through files, DocThis! creates a wiki you can
-host anywhere in your rails application by reading your markdown files in the
-documentation folder and rendering them.
+**DocThis!** exposes the documentation folder in the repository as a mountable
+rails engine. No more navigating through files, **DocThis!** creates a wiki you
+can host anywhere in your rails application by reading your markdown files in
+the documentation folder and rendering them.
 
 ## Usage
 
@@ -48,7 +48,7 @@ Mount your engine wherever you like by adding the following line to your
 application routes:
 
 ~~~ruby
-mount DocThis::Engine, at: "internal/docs"
+mount Docthis::Engine, at: "internal/docs"
 ~~~
 
 Done! Start your application and navigate to `localhost:3000/internal/docs` to
