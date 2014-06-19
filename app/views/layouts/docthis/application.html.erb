@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DocThis!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= csrf_meta_tag %>
+
+    <%= stylesheet_link_tag "docthis/application" %>
+    <%= stylesheet_link_tag "docthis/themes/darkly.min" %>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-links">
+            <span class="sr-only">Activar navegación</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <%= link_to "DocThis!", docthis.documentation_path, class: "navbar-brand" %>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-links">
+          <%= yield :actions %>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container main-content">
+      <%= yield %>
+    </div>
+
+    <%= javascript_include_tag "docthis/application" %>
+
+  </body>
+</html>

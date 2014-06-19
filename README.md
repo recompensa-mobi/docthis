@@ -53,7 +53,7 @@ mount DocThis::Engine, at: "internal/docs"
 
 Done! Start your application and navigate to `localhost:3000/internal/docs` to
 see your documentation index. Any file in your `docs` folder can be accessed by
-prefixing this routes.
+prefixing this path.
 
 ### Configuration
 
@@ -68,14 +68,20 @@ DocThis.configure do |config|
 
   # Name of the folder containing the documentation. Defaults to docs.
   config.docs_folder = "docs"
+
+  # Name of the stylesheet to apply. Can be any of the following bootswatch
+  # themes: amelia, cerulean, cosmo, cyborg, darkly, flatly, journal, lumen,
+  # readable, simplex, slate, spacelab, superhero, united, yeti
+  config.theme = :darkly
 end
 ~~~
 
 ### Writing documentation
 
 You can create markdown files and folders containing markdown files (up to one
-level deep) in the documentation folder. Any file named `index.md` will be used
-if the folder is requested. For example, you could have something like this:
+level deep) in the documentation folder. Any file named `index.md` will be
+rendered if the folder is requested. For example, you could have something like
+this:
 
 ~~~
 docs/
@@ -87,7 +93,7 @@ docs/
 ~~~
 
 Given that directory structure, and assuming you mount the engine at
-`internal/docs`, you'll get this urls:
+`internal/docs`, you'll get these urls:
 
 * `/internal/docs`: The engine root will render the `docs/index.md` file.
 

@@ -1,0 +1,31 @@
+{
+  "name": "heroku",
+  "description": "Install Heroku Toolbelt",
+  "long_description": "Chef Cookbook for Heroku Toolbelt\n===============\n\nVery simple cookbook to install Heroku Toolbelt on Ubuntu.\n\nJust include the default recipe and it will run the Heroku installer and add to /etc/profile.d to add the bin directory to the path.\n\n",
+  "maintainer": "Ian Chilton",
+  "maintainer_email": "ian@ichilton.co.uk",
+  "license": "All rights reserved",
+  "platforms": {
+    "ubuntu": ">= 0.0.0",
+    "debian": ">= 0.0.0"
+  },
+  "dependencies": {
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+  },
+  "version": "0.1.0"
+}
