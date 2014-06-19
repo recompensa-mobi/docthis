@@ -60,7 +60,7 @@ prefixing this path.
 You can use an initializer to configure the behaviour of the engine:
 
 ~~~ruby
-DocThis.configure do |config|
+Docthis.configure do |config|
   # Use basic auth to protect any requests to the docs site. Defaults to false.
   config.use_basic_auth = true
   config.basic_auth_username = "internal"

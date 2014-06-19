@@ -111,7 +111,7 @@ class Docthis::Page
   # Returns:
   #   The base directory in where the documentation files are found.
   def self.base_dir
-    File.join(Rails.root, "docs")
+    File.join(Rails.root, Docthis.docs_folder)
   end
 
   protected
