@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: nfs
-# Recipe:: default 
+# Recipe:: default
 #
 # Copyright 2011, Eric G. Wolfe
 #
@@ -17,29 +17,5 @@
 # limitations under the License.
 #
 
-# Install package, dependent on platform
-node['nfs']['packages'].each do |nfspkg|
-  package nfspkg
-end
-
-# Configure NFS client components
-node['nfs']['config']['client_templates'].each do |client_template|
-  template client_template do
-    mode 0644
-    notifies :restart, "service[portmap]"
-    notifies :restart, "service[nfslock]"
-  end
-end
-
-# Start NFS client components
-service "portmap" do
-  service_name node['nfs']['service']['portmap']
-  action [ :start, :enable ]
-  supports :status => true
-end
-
-service "nfslock" do
-  service_name node['nfs']['service']['lock']
-  action [ :start, :enable ]
-  supports :status => true
-end
+# NFS client components protocol-level less than, or equal to 3 moved to _common recipe
+include_recipe 'nfs::_common'

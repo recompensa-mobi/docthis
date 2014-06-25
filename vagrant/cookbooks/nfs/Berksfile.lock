@@ -1,3 +1,0 @@
-cookbook 'nfs', :path => '/home/wolfe21/cookbooks/nfs'
-cookbook 'apt', :locked_version => '1.9.2'
-cookbook 'line', :locked_version => '0.4.2'

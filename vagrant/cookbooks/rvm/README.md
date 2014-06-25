@@ -1478,7 +1478,7 @@ Ideally create a topic branch for every seperate change you make.
 Make sure you have the following requirements setup:
 
 * [Vagrant](http://www.vagrantup.com/)
-* [vagrant-verkshelf](https://github.com/riotgames/vagrant-berkshelf)
+* [vagrant-berkshelf](https://github.com/riotgames/vagrant-berkshelf) plugin for Vagrant
 
 After you `bundle install` run `rake` for unit tests and `kitchen test` for
 integration level tests.
@@ -1490,7 +1490,7 @@ Author:: [Fletcher Nichol][fnichol] (<fnichol@nichol.ca>) [![endorse](http://api
 
 Contributors:: https://github.com/fnichol/chef-rvm/contributors
 
-Copyright:: 2010, 2011, Fletcher Nichol
+Copyright:: 2010 - 2014, Fletcher Nichol
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -1531,6 +1531,7 @@ limitations under the License.
 [rvm_upgrading]:        https://rvm.io/rvm/upgrading/
 [script_resource]:      http://wiki.opscode.com/display/chef/Resources#Resources-Script
 [vagrant]:              http://vagrantup.com
+[vagrant-berkshelf]:    https://github.com/berkshelf/vagrant-berkshelf
 
 [repo]:         https://github.com/fnichol/chef-rvm
 [issues]:       https://github.com/fnichol/chef-rvm/issues

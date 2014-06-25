@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  config.vm.box = "hashicorp/precise64"
+  config.vm.box = "chef/ubuntu-14.04"
 
   # Use a dedicated private network
   config.vm.network :private_network, ip: "10.0.0.2"
@@ -19,8 +19,8 @@ Vagrant.configure("2") do |config|
     vb.customize [ "guestproperty", "set", :id, "/VirtualBox/GuestAdd/VBoxService/--timesync-set-threshold", 500 ]
   end
 
-  # Provision locales for postgresql
-  config.vm.provision :shell, path: "vagrant/shell/language.sh"
+  # Configure the basic infrastructure to setup chef
+  config.vm.provision :shell, path: "vagrant/shell/chef.sh"
 
   # Configure chef provisioners
   config.vm.provision :chef_solo do |chef|
@@ -34,13 +34,6 @@ Vagrant.configure("2") do |config|
         }
       },
 
-      postgresql: {
-        password: {
-          # Hashed password for 'admin'
-          postgres: "md5244af1e2823d5eaeeffc42c5096d8260"
-        }
-      },
-
       rvm: {
         user_installs: [{
           user: "vagrant",
@@ -51,11 +44,9 @@ Vagrant.configure("2") do |config|
 
     chef.add_recipe "apt"
     chef.add_recipe "sudo::default"
-    chef.add_recipe "postgresql::server"
     chef.add_recipe "rvm::user"
     chef.add_recipe "rvm::vagrant"
     chef.add_recipe "nfs"
-    chef.add_recipe "heroku::default"
     chef.add_recipe "nodejs"
   end
 end
