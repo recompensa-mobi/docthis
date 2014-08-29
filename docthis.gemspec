@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
 
   s.files = Dir["{app,config,db,lib}/**/*", "Rakefile", "README.md"]
 
-  s.add_dependency "rails", "~> 4.0.5"
+  s.add_dependency "rails", "~> 4.0"
   s.add_dependency "pygmentize"
   s.add_dependency "redcarpet"
 
