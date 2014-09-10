@@ -107,6 +107,31 @@ Given that directory structure, and assuming you mount the engine at
 In addition to this, the engine will process the folder structure and create
 items in the navigation bar to access these files.
 
+## Development
+
+### Prerequisites
+
+The environment is virtualized with vagrant, so you will need:
+
+1. [Vagrant](http://www.vagrantup.com/) to manage the virtualized development
+   environment. This requires installing
+[VirtualBox](https://www.virtualbox.org/).
+
+1. A [NFS](http://en.wikipedia.org/wiki/Network_File_System) implementation is
+   recommended (but not required) so that vagrant works faster. On any
+debian-based linux distribution, you can install it by running `sudo apt-get
+install nfs-kernel-server `. MacOS comes with it by default.
+
+### Quick environment setup
+
+1. Start the virtualized environment with `vagrant up`. This **will** take a
+   while, as the entire development environment is downloaded and configured.
+
+1. Connect to the virtual machine by running `vagrant ssh`. Once connected, `cd
+   /vagrant` will cd into the project folder, which is automatically synced to
+your machine. There you can run any of the normal ruby commands for gem
+development.
+
 ## License
 
 Copyright (C) 2014 Recompensa.mobi

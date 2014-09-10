@@ -1,5 +1,5 @@
 DEPENDENCIES
-  apt (~> 1.9.0)
+  apt
   nfs
   nodejs
   rvm
@@ -8,7 +8,7 @@ DEPENDENCIES
   sudo
 
 GRAPH
-  apt (1.9.2)
+  apt (2.6.0)
   build-essential (2.0.4)
   chef_gem (0.1.0)
   java (1.22.0)
@@ -22,5 +22,5 @@ GRAPH
   rvm (0.9.2)
     chef_gem (>= 0.0.0)
     java (>= 0.0.0)
-  sudo (2.6.0)
+  sudo (2.7.0)
   yum (3.2.2)

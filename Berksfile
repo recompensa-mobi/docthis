@@ -1,12 +1,14 @@
-source "https://api.berkshelf.com"
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+source "https://supermarket.getchef.com"
 
 # Infrastructure dependencies
-cookbook 'apt', "~> 1.9.0"
+cookbook "apt"
 cookbook "sudo"
 cookbook "nfs"
 
 # Ruby compilation and installation
-cookbook "rvm", github: "fnichol/chef-rvm"
+cookbook "rvm"
 
 # Javascript environment
 cookbook "nodejs"
